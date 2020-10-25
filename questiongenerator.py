@@ -8,14 +8,12 @@ import re
 import random
 import json
 import en_core_web_sm
-#from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
-#from transformers import BertTokenizer, BertForSequenceClassification
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForSequenceClassification
 class QuestionGenerator():
 
     def __init__(self, model_dir=None):
 
-        QG_PRETRAINED = 'iarfmoose/t5-base-question-generator'
+        QG_PRETRAINED = './bgmartins/my-question-generator'
         self.ANSWER_TOKEN = '<answer>'
         self.CONTEXT_TOKEN = '<context>'
         self.SEQ_LENGTH = 512
